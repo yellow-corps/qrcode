@@ -1,0 +1,12 @@
+name: qrcode
+
+services:
+  qrcode:
+    container_name: qrcode
+    image: ghcr.io/yellow-corps/qrcode:${VERSION:-latest}
+    build:
+      context: ./
+      dockerfile: ./Containerfile
+    restart: unless-stopped
+    ports:
+      - "8080:80"

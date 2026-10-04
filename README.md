@@ -1,16 +1,15 @@
 # qrcode
 
-A small GCP function for generating QR codes
+A small web server for generating QR codes.
 
 ## Requirements
 
-* A GCP service connected to this repository
-* Node.js 22 or greater
+- Docker
 
 ## Usage
 
-Provide a query parameter of URI encoded `data` to the function, e.g.
+Provide data to encode as a path, e.g.
 
 ```
-https://<function-address>?data=<uri-encoded-data>
+https://<container-address>/<data>
 ```
